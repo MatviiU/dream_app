@@ -1,0 +1,55 @@
+# === FLUTTER/DART ===
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+generated_plugin_registrant.dart
+.metadata
+
+# === FIREBASE ===
+.firebase/
+**/firebase.json
+**/.firebase/
+**/.firebaserc
+**/firebase-debug.log
+**/firebase-debug.*.log
+**/firebase-messaging-sw.js
+**/firebase-messaging-sw.js.map
+functions/node_modules/
+functions/.env
+functions/.env.*
+
+# === ANDROID ===
+android/.gradle/
+android/local.properties
+android/build/
+android/*.iml
+android/.idea/
+
+# === iOS / Xcode ===
+ios/.symlinks/
+ios/Pods/
+ios/build/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Runner.xcworkspace/
+*.xcworkspace
+*.xcuserstate
+*.xcassets
+
+# === IDEs ===
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+.history/
+
+# === SYSTEM FILES ===
+.DS_Store
+Thumbs.db
