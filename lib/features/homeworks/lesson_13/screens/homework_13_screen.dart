@@ -13,7 +13,6 @@ class HomeworkThirteenScreen extends StatelessWidget {
           padding: EdgeInsets.only(bottom: 20),
           child: Column(
             spacing: 8,
-            mainAxisSize: MainAxisSize.min,
             children: [
               Expanded(
                 child: MyContainer(
