@@ -1,3 +1,4 @@
+import 'package:dream_app/features/homeworks/lesson_13/widgets/my_container.dart';
 import 'package:flutter/material.dart';
 
 class HomeworkThirteenScreen extends StatelessWidget {
@@ -6,96 +7,24 @@ class HomeworkThirteenScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          spacing: 8,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Container(
-              width: 300,
-              height: 150,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                color: Colors.blue,
-              ),
-              alignment: Alignment.bottomRight,
-              child: const Padding(
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  spacing: 10,
-                  children: [
-                    Icon(Icons.star, color: Colors.white),
-                    Text(
-                      'Привіт, Flutter!',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Icon(Icons.star, color: Colors.white),
-                  ],
+      appBar: AppBar(title: const Text('Homework 13'), centerTitle: true),
+      body: const Center(
+        child: Padding(
+          padding: EdgeInsets.only(bottom: 20),
+          child: Column(
+            spacing: 8,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Expanded(
+                child: MyContainer(
+                  color: Colors.blue,
+                  alignment: Alignment.topLeft,
                 ),
               ),
-            ),
-            Container(
-              width: 300,
-              height: 150,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                color: Colors.green,
-              ),
-              alignment: Alignment.bottomRight,
-              child: const Padding(
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  spacing: 10,
-                  children: [
-                    Icon(Icons.star, color: Colors.white),
-                    Text(
-                      'Привіт, Flutter!',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Icon(Icons.star, color: Colors.white),
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              width: 300,
-              height: 150,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                color: Colors.red,
-              ),
-              alignment: Alignment.bottomRight,
-              child: const Padding(
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  spacing: 10,
-                  children: [
-                    Icon(Icons.star, color: Colors.white),
-                    Text(
-                      'Привіт, Flutter!',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Icon(Icons.star, color: Colors.white),
-                  ],
-                ),
-              ),
-            ),
-          ],
+              MyContainer(color: Colors.green, alignment: Alignment.center),
+              MyContainer(color: Colors.red, alignment: Alignment.bottomRight),
+            ],
+          ),
         ),
       ),
     );
