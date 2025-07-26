@@ -1,4 +1,4 @@
-import 'package:dream_app/features/homeworks/lesson_13_additional/homework_13_additional_screen.dart';
+import 'package:dream_app/features/homeworks/lesson_14/rate/screens/rate_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Homework 13',
-      home: HomeworkThirteenAdditionalScreen(),
+      home: RateScreen()
     );
   }
 }
