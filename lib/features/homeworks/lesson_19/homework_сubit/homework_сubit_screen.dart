@@ -32,17 +32,19 @@ class HomeworkCubitScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               FloatingActionButton(
-                onPressed: (){
+                onPressed: () {
                   context.read<Lesson19Cubit>().incrementCounter();
                 },
+                heroTag: 'cubit_increment_fab',
                 tooltip: 'Increment',
                 child: const Icon(Icons.add),
               ),
               FloatingActionButton(
-                onPressed: (){
+                onPressed: () {
                   context.read<Lesson19Cubit>().decrementCounter();
                 },
                 tooltip: 'Decrement',
+                heroTag: 'cubit_decrement_fab',
                 child: const Icon(Icons.remove),
               ),
             ],

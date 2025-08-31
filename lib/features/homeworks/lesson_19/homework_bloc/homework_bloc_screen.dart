@@ -36,6 +36,7 @@ class HomeworkBlocScreen extends StatelessWidget {
                     Lesson19BlocIncrementEvent(),
                   );
                 },
+                heroTag: 'bloc_increment_fab',
                 tooltip: 'Increment',
                 child: const Icon(Icons.add),
               ),
@@ -45,6 +46,7 @@ class HomeworkBlocScreen extends StatelessWidget {
                     Lesson19BlocDecrementEvent(),
                   );
                 },
+                heroTag: 'bloc_decrement_fab',
                 tooltip: 'Decrement',
                 child: const Icon(Icons.remove),
               ),
