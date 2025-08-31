@@ -6,7 +6,11 @@ import 'package:dream_app/features/homeworks/lesson_20/presentation/screens/less
 import 'package:dream_app/features/homeworks/lesson_20/presentation/screens/rate_app_screen.dart';
 import 'package:dream_app/features/homeworks/lesson_22/homework_animations_screen.dart';
 import 'package:dream_app/features/homeworks/lesson_22/lesson_22_screen.dart';
+import 'package:dream_app/features/homeworks/lesson_23/data/repository/fake_user_repository.dart';
+import 'package:dream_app/features/homeworks/lesson_23/presentation/cubit/user_profile_cubit.dart';
+import 'package:dream_app/features/homeworks/lesson_23/presentation/ui/screens/user_profile_screen.dart';
 import 'package:dream_app/features/navigation/navigation_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 final lesson19Router = GoRouter(
@@ -58,6 +62,22 @@ final lesson19Router = GoRouter(
               builder: (context, state) => const BouncingBallScreen(),
             ),
           ],
+        ),
+        GoRoute(
+          path: 'lesson-23-main',
+          name: Lesson19ScreenNames.lesson23Screen,
+          builder: (context, state) {
+            return RepositoryProvider(
+              create: (context) => FakeUserRepository(),
+              child: BlocProvider(
+                create: (context) {
+                  final repository = context.read<FakeUserRepository>();
+                  return UserProfileCubit(repository)..loadUserProfile();
+                },
+                child: const UserProfileScreen(),
+              ),
+            );
+          },
         ),
       ],
     ),
