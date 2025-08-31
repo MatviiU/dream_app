@@ -1,5 +1,5 @@
-import 'package:dream_app/features/homeworks/lesson_19/homework_%D1%81ubit/cubit/lesson_19_cubit.dart';
-import 'package:dream_app/features/homeworks/lesson_19/homework_%D1%81ubit/cubit/lesson_19_cubit_state.dart';
+import 'package:dream_app/features/homeworks/lesson_19/homework_cubit/cubit/lesson_nineteen_cubit.dart';
+import 'package:dream_app/features/homeworks/lesson_19/homework_cubit/cubit/lesson_nineteen_cubit_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
