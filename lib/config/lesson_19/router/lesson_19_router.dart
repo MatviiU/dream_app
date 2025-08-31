@@ -1,6 +1,6 @@
 import 'package:dream_app/config/lesson_19/router/screen_names.dart';
-import 'package:dream_app/features/homeworks/lesson_19/homework_%D1%81ubit/homework_%D1%81ubit_screen.dart';
 import 'package:dream_app/features/homeworks/lesson_19/homework_bloc/homework_bloc_screen.dart';
+import 'package:dream_app/features/homeworks/lesson_19/homework_cubit/homework_cubit_screen.dart';
 import 'package:dream_app/features/homeworks/lesson_19/lesson_19_main.dart';
 import 'package:dream_app/features/homeworks/lesson_20/presentation/screens/lesson_20_screen.dart';
 import 'package:dream_app/features/homeworks/lesson_20/presentation/screens/rate_app_screen.dart';
