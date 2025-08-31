@@ -7,37 +7,51 @@ class NavigationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Навігація по домашках')),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          spacing: 20,
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            _buildNavigationCard(
-              context,
-              title: 'Урок 19: Cubit та Bloc',
-              icon: Icons.school_outlined,
-              routeName: Lesson19ScreenNames.main19Screen,
-              description: 'Приклади керування станом',
+    return SafeArea(
+      top: false,
+      left: false,
+      right: false,
+      child: Scaffold(
+        appBar: AppBar(title: const Text('Навігація по домашках')),
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: SingleChildScrollView(
+            child: Column(
+              spacing: 20,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                _buildNavigationCard(
+                  context,
+                  title: 'Урок 19: Cubit та Bloc',
+                  icon: Icons.school_outlined,
+                  routeName: Lesson19ScreenNames.main19Screen,
+                  description: 'Приклади керування станом',
+                ),
+                _buildNavigationCard(
+                  context,
+                  title: 'Урок 20: Інші завдання',
+                  icon: Icons.lightbulb_outline,
+                  routeName: Lesson19ScreenNames.lesson20Screen,
+                  description: 'Додаткові домашні завдання',
+                ),
+                _buildNavigationCard(
+                  context,
+                  title: 'Урок 22: Анімації',
+                  icon: Icons.animation,
+                  routeName: Lesson19ScreenNames.lesson22Screen,
+                  description: 'Приклади Flutter анімацій',
+                ),
+                _buildNavigationCard(
+                  context,
+                  title: 'Урок 23: Обробка помилок',
+                  icon: Icons.error_outline,
+                  routeName: Lesson19ScreenNames.lesson23Screen,
+                  description: 'Приклад обробки помилок',
+                ),
+              ],
             ),
-            _buildNavigationCard(
-              context,
-              title: 'Урок 20: Інші завдання',
-              icon: Icons.lightbulb_outline,
-              routeName: Lesson19ScreenNames.lesson20Screen,
-              description: 'Додаткові домашні завдання',
-            ),
-            _buildNavigationCard(
-              context,
-              title: 'Урок 22: Анімації',
-              icon: Icons.animation,
-              routeName: Lesson19ScreenNames.lesson22Screen,
-              description: 'Приклади Flutter анімацій',
-            ),
-          ],
+          ),
         ),
       ),
     );

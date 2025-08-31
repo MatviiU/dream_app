@@ -1,4 +1,4 @@
-import 'package:dream_app/config/lesson_19/router/lesson_19_router.dart';
+import 'package:dream_app/config/lesson_19/router/lessons_router.dart';
 import 'package:dream_app/features/homeworks/lesson_19/homework_bloc/bloc/lesson_19_bloc.dart';
 import 'package:dream_app/features/homeworks/lesson_19/homework_cubit/cubit/lesson_nineteen_cubit.dart';
 import 'package:dream_app/features/homeworks/lesson_20/presentation/cubit/rate_app_cubit.dart';
