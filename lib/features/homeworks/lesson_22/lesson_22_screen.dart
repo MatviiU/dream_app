@@ -40,7 +40,7 @@ class Lesson22MainScreen extends StatelessWidget {
             padding: const EdgeInsets.all(24.0),
             child: _buildAnimationCard(
               context,
-              title: "М'яч, що стрибає",
+              title: "Анімація м'яча",
               description: 'Демонстрація простої анімації руху віджета.',
               icon: Icons.sports_soccer,
               gradientColors: [Colors.orangeAccent, Colors.deepOrange],

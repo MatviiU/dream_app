@@ -52,7 +52,10 @@ class _BouncingBallScreenState extends State<BouncingBallScreen>
     const fullRotations = 4.0;
 
     _rotationAnimation = TweenSequence<double>([
-      TweenSequenceItem(tween: Tween<double>(begin: 0.0, end: fullRotations * 0.6 * pi), weight: 60),
+      TweenSequenceItem(
+        tween: Tween<double>(begin: 0.0, end: fullRotations * 0.6 * pi),
+        weight: 60,
+      ),
       TweenSequenceItem(
         tween: Tween<double>(
           begin: fullRotations * 0.6 * pi,
@@ -66,12 +69,13 @@ class _BouncingBallScreenState extends State<BouncingBallScreen>
       ),
     ]).animate(_controller);
 
-    _controller..addStatusListener((status) {
-      if (status == AnimationStatus.completed) {
-        _controller.forward(from: 0.0);
-      }
-    })..forward();
-
+    _controller
+      ..addStatusListener((status) {
+        if (status == AnimationStatus.completed) {
+          _controller.forward(from: 0.0);
+        }
+      })
+      ..forward();
   }
 
   void _toggleAnimation() {
