@@ -7,4 +7,5 @@ abstract class Lesson19ScreenNames {
   static const lesson20Screen = 'lesson-20-screen';
   static const lesson22Screen = 'lesson-22-screen';
   static const bouncingBallScreen = 'bouncing-ball-screen';
+  static const lesson23Screen = 'lesson-23-screen';
 }
