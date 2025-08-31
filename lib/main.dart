@@ -1,6 +1,7 @@
 import 'package:dream_app/config/lesson_19/router/lesson_19_router.dart';
 import 'package:dream_app/features/homeworks/lesson_19/homework_%D1%81ubit/cubit/lesson_19_cubit.dart';
 import 'package:dream_app/features/homeworks/lesson_19/homework_bloc/bloc/lesson_19_bloc.dart';
+import 'package:dream_app/features/homeworks/lesson_20/presentation/cubit/rate_app_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => Lesson19Cubit()),
         BlocProvider(create: (context) => Lesson19Bloc()),
+        BlocProvider(create: (context) => RateAppCubit()),
       ],
       child: MaterialApp.router(routerConfig: lesson19Router),
     );
