@@ -9,6 +9,7 @@ import 'package:dream_app/features/homeworks/lesson_22/lesson_22_screen.dart';
 import 'package:dream_app/features/homeworks/lesson_23/data/repository/fake_user_repository.dart';
 import 'package:dream_app/features/homeworks/lesson_23/presentation/cubit/user_profile_cubit.dart';
 import 'package:dream_app/features/homeworks/lesson_23/presentation/ui/screens/user_profile_screen.dart';
+import 'package:dream_app/features/homeworks/lesson_26/presentation/screens/cheque_screen.dart';
 import 'package:dream_app/features/navigation/navigation_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -78,6 +79,11 @@ final lesson19Router = GoRouter(
               ),
             );
           },
+        ),
+        GoRoute(
+          path: 'lesson-26-main',
+          name: Lesson19ScreenNames.lesson26Screen,
+          builder: (context, state) => ChequeScreen(),
         ),
       ],
     ),
