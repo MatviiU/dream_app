@@ -49,6 +49,12 @@ class NavigationScreen extends StatelessWidget {
                   routeName: Lesson19ScreenNames.lesson23Screen,
                   description: 'Приклад обробки помилок',
                 ),
+                _buildNavigationCard(
+                  context,
+                  title: 'Урок 26: JSON',
+                  icon: Icons.document_scanner,
+                  routeName: Lesson19ScreenNames.lesson26Screen,
+                ),
               ],
             ),
           ),
