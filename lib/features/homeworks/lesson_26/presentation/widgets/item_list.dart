@@ -9,7 +9,6 @@ class ItemList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      shrinkWrap: true,
       itemCount: silpoCheque.items.length,
       itemBuilder: (context, index) {
         return Padding(

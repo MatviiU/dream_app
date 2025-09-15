@@ -9,20 +9,32 @@ import 'package:dream_app/features/homeworks/lesson_26/presentation/widgets/pred
 import 'package:dream_app/features/homeworks/lesson_26/presentation/widgets/total_amount.dart';
 import 'package:flutter/material.dart';
 
-class ChequeScreen extends StatelessWidget {
+class ChequeScreen extends StatefulWidget {
   const ChequeScreen({super.key});
 
-  SilpoChequeEntity parseSilpoCheque() {
-    const json = silpoJson;
-    final jsonMap = jsonDecode(json) as Map<String, dynamic>;
-    final cheque = SilpoChequeDto.fromJson(jsonMap);
-    final chequeEntity = SilpoChequeEntity.fromDto(cheque);
-    return chequeEntity;
+  @override
+  State<ChequeScreen> createState() => _ChequeScreenState();
+}
+
+class _ChequeScreenState extends State<ChequeScreen> {
+  late final SilpoChequeEntity silpoCheque;
+
+  @override
+  void initState() {
+    super.initState();
+    SilpoChequeEntity parseSilpoCheque() {
+      const json = silpoJson;
+      final jsonMap = jsonDecode(json) as Map<String, dynamic>;
+      final cheque = SilpoChequeDto.fromJson(jsonMap);
+      final chequeEntity = SilpoChequeEntity.fromDto(cheque);
+      return chequeEntity;
+    }
+
+    silpoCheque = parseSilpoCheque();
   }
 
   @override
   Widget build(BuildContext context) {
-    final silpoCheque = parseSilpoCheque();
     return SafeArea(
       top: false,
       left: false,
