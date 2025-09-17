@@ -9,12 +9,6 @@ class YourRegionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final duration = DateTime.now().difference(alert.startedAt);
-    final hours = duration.inHours;
-    final minutes = duration.inMinutes.remainder(60);
-    final durationText =
-        '${hours.toString().padLeft(2, '0')}:'
-        '${minutes.toString().padLeft(2, '0')}';
     final startTime = DateFormat('HH:mm').format(alert.startedAt);
 
     return Card(
@@ -53,7 +47,7 @@ class YourRegionCard extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              'Початок о $startTime (триває $durationText)',
+              'Початок о $startTime',
               style: TextStyle(
                 color: Colors.white.withValues(alpha: 0.9),
                 fontSize: 15,
