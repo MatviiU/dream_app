@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:dream_app/config/lesson_19/router/screen_names.dart';
 import 'package:dream_app/features/homeworks/lesson_19/homework_bloc/homework_bloc_screen.dart';
 import 'package:dream_app/features/homeworks/lesson_19/homework_cubit/homework_cubit_screen.dart';
@@ -10,6 +11,11 @@ import 'package:dream_app/features/homeworks/lesson_23/data/repository/fake_user
 import 'package:dream_app/features/homeworks/lesson_23/presentation/cubit/user_profile_cubit.dart';
 import 'package:dream_app/features/homeworks/lesson_23/presentation/ui/screens/user_profile_screen.dart';
 import 'package:dream_app/features/homeworks/lesson_26/presentation/screens/cheque_screen.dart';
+import 'package:dream_app/features/homeworks/lesson_27/data/data_source/alerts_data_source.dart';
+import 'package:dream_app/features/homeworks/lesson_27/data/repository/alerts_repository.dart';
+import 'package:dream_app/features/homeworks/lesson_27/network/dio/alerts_api_dio.dart';
+import 'package:dream_app/features/homeworks/lesson_27/presentation/cubit/alerts_cubit.dart';
+import 'package:dream_app/features/homeworks/lesson_27/presentation/ui/screens/alerts_screen.dart';
 import 'package:dream_app/features/navigation/navigation_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -83,7 +89,27 @@ final lesson19Router = GoRouter(
         GoRoute(
           path: 'lesson-26-main',
           name: Lesson19ScreenNames.lesson26Screen,
-          builder: (context, state) => ChequeScreen(),
+          builder: (context, state) => const ChequeScreen(),
+        ),
+        GoRoute(
+          path: 'lesson-27-main',
+          name: Lesson19ScreenNames.lesson27Screen,
+          builder: (context, state) {
+            return BlocProvider(
+              create: (context) => AlertsCubit(
+                alertsRepository: AlertsRepository(
+                  alertsDataSource: AlertsDataSource(
+                    alertsApi: AlertsApiDio(
+                      dio: Dio(
+                        BaseOptions(baseUrl: 'https://api.alerts.in.ua/v1'),
+                      ),
+                    ),
+                  ),
+                ),
+              )..getAlerts(),
+              child: const AlertsScreen(),
+            );
+          },
         ),
       ],
     ),

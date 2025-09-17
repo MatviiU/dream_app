@@ -55,6 +55,12 @@ class NavigationScreen extends StatelessWidget {
                   icon: Icons.document_scanner,
                   routeName: Lesson19ScreenNames.lesson26Screen,
                 ),
+                _buildNavigationCard(
+                  context,
+                  title: 'Урок 27: API',
+                  icon: Icons.api,
+                  routeName: Lesson19ScreenNames.lesson27Screen,
+                ),
               ],
             ),
           ),
