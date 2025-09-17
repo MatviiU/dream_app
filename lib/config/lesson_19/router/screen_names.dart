@@ -9,4 +9,5 @@ abstract class Lesson19ScreenNames {
   static const bouncingBallScreen = 'bouncing-ball-screen';
   static const lesson23Screen = 'lesson-23-screen';
   static const lesson26Screen = 'lesson-26-screen';
+  static const lesson27Screen = 'lesson-27-screen';
 }
